@@ -1,12 +1,24 @@
+//App.js
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import AppNav from './src/Nav/AppNav'
+import { NavigationContainer } from '@react-navigation/native';
+import { initDatabase } from './src/database/database';
+import { useEffect } from 'react';
+import { SettingsProvider } from './src/context/SettingsContext';
 
+//<MainTab/> <AppNav/>
 export default function App() {
+  useEffect(() => {
+    initDatabase(); // Initialize database on app start
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <SettingsProvider>
+        <NavigationContainer>
+          <DrawerNav/>
+        </NavigationContainer>
+      </SettingsProvider>
   );
 }
 
