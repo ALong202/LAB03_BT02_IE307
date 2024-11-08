@@ -2,9 +2,8 @@
 import { View, Text,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import HomeScreen from '../screens/HomeScreen2';
+import HomeScreen from '../screens/HomeScreen';
 import { Entypo } from '@expo/vector-icons';
-import HomeDetailsScreen from '../screens/HomeDetailsScreen';
 import AddNote from '../screens/AddNote';
 import EditNote from '../screens/EditNote';
 

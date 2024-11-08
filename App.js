@@ -1,11 +1,11 @@
 //App.js
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import AppNav from './src/Nav/AppNav'
 import { NavigationContainer } from '@react-navigation/native';
 import { initDatabase } from './src/database/database';
 import { useEffect } from 'react';
 import { SettingsProvider } from './src/context/SettingsContext';
+import DrawerNav from './src/Nav/DrawerNav';
 
 //<MainTab/> <AppNav/>
 export default function App() {
